@@ -1,18 +1,22 @@
 <!DOCTYPE html> <!-- every HTML document starts with a DOCTYPE declaration.
     which is followed by the html tag, head tag and body tag -->
-<html>
+<html lang="en-US">
+<!-- The language of the document can be declared in the <html> tag
+The language is declared with the lang attribute. check line 3
+-->
 <head>
 	<title> w3Schools HTML exercise </title>
 </head>
-<body>
+<body> <!-- the body element defines the documwnt body-->
 
-<h1>INST 377 introduction exercise to html. </h1>
+<h1>INST 377 introductory exercise to html. </h1>
+<!-- the <h1> element defines a heading -->
 <p>This is a paragraph which is made by the "< p>" tag.</p>
-<!-- HTMl tags normally come in pairs like the paragraph tags in line 9.
+<!-- HTMl tags normally come in pairs like the paragraph tags in line 10.
 The first tag is the start tag and the second tag is writen with a forward slash 
 to indicate that its the end tag.-->
 
-<p> This is an introduction to learning HTML and a link to the website can be found at <br><a href="https://www.w3schools.com/html/"> link to the site </a> </p>
+<p> This is an introduction to learning HTML and a link to the website used for the exercises can be found at <br><a href="https://www.w3schools.com/html/"> link to the site </a> </p>
 
 <!-- HTML links are defined with the <a> tag-->
 <!-- below is a sample code of how to initialize a hyperlink to another website-->
@@ -27,10 +31,12 @@ provided as attributes -->
 <p> This image was saved locally on my computer <img src="lambo.jpg" width= "70" height="35"> </p>
 
 <!-- HTML buttons are defined with the button tag-->
-<button> click me!! </button>
+<button> click me!! </button> 
 
 <!-- HTMl lists are defined with <ul> (unordered/bullet list) or the <ol> (ordered list/numbered list) tag,
      followed by <li> tags (list items) -->
+
+<p> Creating Lists</p>
 <ul> 
     <li>laptop</li>
     <li>Tablet</li>
@@ -42,7 +48,7 @@ provided as attributes -->
 <ol>
     <li>Coffee</li>
     <li>Tea </li>
-    <li>Almond Chocolate</li>
+    <li>Almond Milk</li>
 
 </ol>
 
@@ -54,10 +60,34 @@ provided as attributes -->
 <br>
 
 <h2> The exercises below examines Elements, Attributes and headings </h2>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
+
+<!-- HTML elements with no content are called empty elements.
+<br> is an empty element without a closing tag ( the <br> tag defines a line break)-->
+<p> Every machine attached to the internet has an <br> ip address </p>
+
+<button> Delete </button> <br> <br> <button> Submit </button>
+<br>
+<br>
+<!-- HTML images also have width and height attributes, which specifies the width and height
+of the image. The width and height are is specified in pixels by default; so width="500" means
+500 pixels wide. -->
+
+<!-- The alt attribute specifies an alternative text to be used, if an image cannot be displayed.-->
+<p Style="Color:red";> The style attribute is used to spcify the styling of an element, like color,font, size etc. </p>
+
+<!-- The value of the title attribute(<title>) in a <p> tag  will be displayed as a tooltip when you mouse over the paragraph-->
+<!--A title Specifies extra information about an element (displayed as a tool tip)-->
+<p title="I'm a tooltip"> Hover your mouse over this text to know what the title is </p>
+
+<p> headings </p>
+<!-- Headings are defined with the <h1> to <h6> tags.heading 1 or <h1> defines the most important heading.
+<h6> defines the least important heading
+ -->
+<!--It's important to use headings to show the document structure. Do not use headings
+to make BIG or BOLD text-->
+<!--You can specify the size for any heading with the style attribute using the CSS font-size property-->
+<h6 style="font-size:30px;"> Heading 6</h6>
+
 <p> </p>
 <p> </p>
 <p> </p>
