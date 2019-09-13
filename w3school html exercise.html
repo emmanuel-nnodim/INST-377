@@ -5,11 +5,30 @@
 The language is declared with the lang attribute. check line 3
 -->
 <head>
-	<title> w3Schools HTML exercise </title>
+    <title> w3Schools HTML exercise </title>
+    <!--An initial CSS is used to define a style for a single HTML page in 
+    the <head> section see example below-->
+    <!--
+    <style>
+        body{background-color:SandyBrown;} h1{color:darkgreen;} 
+    </style> -->
+    <!--An external style sheet is used to define the style for many HTMl pages.
+    With an External style sheet you can change the look of an entire web site by adding a link in the 
+    <head> section of the HTML page. See example below. The path(href) is saved
+    in the same folder as the html document-->
+    <!-- <link rel="stylesheet" href="w3schools_style.css"> -->
+    <style>
+        #att1{
+            background-color:Tan;
+        }
+        p.error{
+            color:red;
+        }
+    </style>
 </head>
 <body> <!-- the body element defines the documwnt body-->
 
-<h1>INST 377 introductory exercise to html. </h1>
+<h1 style="color:Teal;">INST 377 introductory exercise to html. </h1>
 <!-- the <h1> element defines a heading -->
 <p>This is a paragraph which is made by the "< p>" tag.</p>
 <!-- HTMl tags normally come in pairs like the paragraph tags in line 10.
@@ -27,8 +46,10 @@ The source file(src), alternative text(alt), width, and height are
 provided as attributes -->
 
 <p> This data cloud image was taken from the codeAcademy website <img src="https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/cloud.svg" 
-	alt="https://codeAcademy.com" width="104" height="100"> </p>
-<p> This image was saved locally on my computer <img src="lambo.jpg" width= "70" height="35"> </p>
+    alt="https://codeAcademy.com" width="104" height="100"> </p>
+
+<!--The alt attribute specifies an alternative text to be used, if an image cannot be displayed-->
+<p> This image was saved locally on my computer <img src="carr.jpg" width= "70" height="35" alt="A white Lamborghini aventador"> </p>
 
 <!-- HTML buttons are defined with the button tag-->
 <button> click me!! </button> 
@@ -59,7 +80,7 @@ provided as attributes -->
 
 <br>
 
-<h2> The exercises below examines Elements, Attributes and headings </h2>
+<h2 style="color:Teal"> The exercises below examines Elements, Attributes and headings </h2>
 
 <!-- HTML elements with no content are called empty elements.
 <br> is an empty element without a closing tag ( the <br> tag defines a line break)-->
@@ -86,12 +107,123 @@ of the image. The width and height are is specified in pixels by default; so wid
 <!--It's important to use headings to show the document structure. Do not use headings
 to make BIG or BOLD text-->
 <!--You can specify the size for any heading with the style attribute using the CSS font-size property-->
-<h6 style="font-size:30px;"> Heading 6</h6>
+<h6 style="font-size:15px;"> Heading 6</h6>
 
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
+<h2 style="text-align:center; color:Teal;" > The exercises below examines paragraphs, styles, formatting, quotations, comments, colors and CSS. </h2>
+<p> With HTML you cannot change the output         by adding extra spaces the browser will       remove any   extra spaces and 
+    extra lines
+    when the 
+    page is displayed. </p>
+    
+<pre> The HTML pre element tag 
+    Defines preformatted text
+    The text inside a pre element is displayed in a fixed-width font 
+    And it preserves both spaces and line breaks.
+</pre>
+
+<!--Setting the style of an HTML element, can be done with the stye attribute which is a CSS element-->
+<p>The CSS background-color property defines the background color of an HTML element</p>
+<!--EXAMPLE:<body style="background-color:powderblue;"> -->
+<p style="color:cornflowerblue;"> CSS color property defines the text color of an HTML element</p>
+<p style="font-family:Verdana;"> The CSS font-family propert defines the font to be used for an HTML element</p>
+<p style="font-size:70%;">The CSS font-size property defines the text size for an HTML element</p>
+<p style="text-align:center;"> The CSS text-align property defines the horizontal text alignment for an HTML element</p>
+<!--text-align can also be set to left or right-->
+
+<p> <ins>Here is a list of all HTML formatting elements.</ins> 
+    <ul>
+        <li> < b> Defines bold text </li>
+        <li> < strong> Defines Important text</li>
+        <li> < i> Defines Italic text </li>
+        <li> < em> Defines Emphasized text </li>
+        <li> < mark> Defines Marked/highlighted text </li>
+        <li> < small> Defines Small text </li>
+        <li> < del> Defines Deleted text </li>
+        <li> < ins> Defines Inserted text </li>
+        <li> < sub> Defines Subscript text </li>
+        <li> < sup> Defines Superscript text </li>
+    </ul>    
+</p>
+
+<p> This is a normal text <b> This is a bold text </b> </p> 
+<p> This is a normal text <strong> This is a strong text </strong> </p>
+<p> This is a normal text <i> This text is Italized </i> </p>
+<p> This is a normal text <em> This text is emphasized</em> </p>
+<!-- <strong> and <em> elemets means that the text is important-->
+<p>This is a <small> small text </small> <mark> This text is marked</mark> </p>
+<p>My favorite color is <del> yellow </del> Red </p>
+<p>My <ins>favorite</ins> color is red.</p>
+<p>This is a <sub>Subscripted text</sub> But this text is <sup> Superscripted text</sup> </p>
+<p>____________________________________________________________________________</p>
+
+<!--The HTML <q> element defines a short quotation.-->
+<p>Oscar Wilde once said: <q>Be yourself; everyne else is taken</q> </p>
+
+<!--HTML <blockquote> element defines a section that is quoted from another source.-->
+<p>Here is a quote from WWF's website:
+    <blockquote
+        cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by
+        1.2 million members in the United States and
+        close to 5 million globally.
+    </blockquote>
+</p>
+<!--The HTML <abbr> element defines an abbreviation or an acronym.-->
+<p>The <abbr title="World Health Organization"> WHO </abbr> was founded in 1948.</p>
+
+<!--The HTML <address> element defines contact information (author/owner) of a document or an article-->
+<address> 
+    Written by Zlatan Ibrahimovic<br>
+    Visit us at.....<br> 
+    Zlatan.com<br>
+    Box 564, Disneyland<br>
+    USA
+</address>
+
+<!-- The HTML <cite> element defines the title of a work. Browsers usually display <cite> and <address>
+elements in italic-->
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+<p>The HTML < bdo> element tag defines bi-directional override. <bdo dir="rtl">Overrides the current text direction from right to left</bdo> That text
+was written from the left to right </p>
+
+<!-- This wont show up on your browser because it is a comment -->
+
+<p> HTML colors are specified using predefined color names, or RGB values. A color can be specified by using a color name
+like Violet, Gray, DodgerBlue and etc. HTML supports 140 standard color names
+</p>
+
+<p style="background-color: SlateBlue">You can set the background color of HTMl elements</p>
+<p style="color:FireBrick;"> You can also set the color of the text</p>
+<p style="border:3px solid DodgerBlue;">In HTML you can set the color and thickness of a boarder</p>
+
+<p> In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values</p>
+<p> For example the color name Tomato is the same values as the RGB, HEX and HSL values below</p>
+<p style="background-color:rgb(255, 99, 71);">rgb(255,99,71)</p>
+<p style="background-color:#ff6347;">#ff6347</p>
+<p style="background-color:hsl(9, 100%, 64%);">hsl(9,100%,64%)</p> <br>
+
+<p style="background-color:rgb(225,200,225);" >Colors can be specified as an RGB value using this formula: rgb(red, green, blue)</p>
+<p style="background-color:#29ffaa;">Colors can be specified in a hexadecimal value in the form #rrggbb. rr(red), gg(green), bb(blue)</p>
+<p style="color:hsl(0,100%,90%);"> Saturation can be discribed as the intensty of a color</p> <br>
+<p> ____________________________________________________________________________</p>
+
+<p> CSS stands for Cascading style sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
+<p style="font-family:Georgia;"> An inline CSS uses the style attribute of an HTML element</p>
+
+<h4> Styling HTML with CSS</h4>
+<p id="att1"> To define a specific style for one special element, add and id attribute to the element</p>
+
+<!--To define a style for a special types of elements, add a class attribute to the element-->
+<p class="error"> There are no error's with this server </p>
+
+<!--External style sheets can be rferenced with a full URL or a path. 
+Here's an example that uses a full URL to link to a style sheet.
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+-->
+
 
 </body>
 </html>

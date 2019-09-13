@@ -1,0 +1,24 @@
+body{
+    background-color:Moccasin;
+    font-family:Franklin Gothic Medium;
+}
+
+p{
+    color:RoyalBlue; font-size:102%;
+    
+}
+
+h4{
+    /* The CSS border property defines a border around an HTML element
+       The CSS padding property defines a padding(space) between the text and the border  
+       The CSS margin property defines a margin (space) outside the border
+
+
+    */
+    border-style:solid;
+    border-color: yellow;
+    padding: 30px;
+    margin:20px
+}
+
+
