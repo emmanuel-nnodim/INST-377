@@ -25,12 +25,81 @@ The language is declared with the lang attribute. check line 3
             color:red;
         }
     </style>
+    <!--You can change the default colors of a html link using CSS:-->
+    <!--
+    <style>
+        a:link{
+            color:chartreuse;
+            background-color:transparent;
+            text-decoration:none;
+        }
+        a:visited{
+            color:darkorchid;
+            background-color:transparent;
+            text-decoration:none;
+        }
+        a:active{
+            color:yellow;
+            background-color:transparent;
+            text-decoration:underline;
+        }
+        a:hover{
+            color:red;
+            background-color:transparent;
+            text-decoration:underline;
+        }
+    </style>
+    -->
+    <!--Links are often styled as buttons, by using CSS-->
+    <!--
+    <style>
+        a:link, a:visited{
+            background-color:green;
+            color:white;
+            padding:15px 25px;
+            text-align:center;
+            text-decoration: none;
+            display:inline-block;
+        }
+        a:hover, a:active{
+            background-color:red;
+        }
+    </style> -->
+    <style>
+        table,tr,td{
+            border: 2px solid black;
+        
+            padding:15px;
+        }
+    </style>
+
+    <style> table#t01{
+        border-collapse:collapse;
+        /*background-color:darkkhaki;*/
+        text-align:left;
+        width:90%;
+    }
+        table#t01 th{
+            background-color:black;
+            color:white
+        }
+        table#t01 tr:nth-child(even){
+            background-color:lightgray
+        }
+        table#t01 tr:nth-child(odd){
+            background-color:white
+        }
+
+        
+    }
+    </style>
+
 </head>
-<body> <!-- the body element defines the documwnt body-->
+<body> <!-- the body element defines the document body and it contains everything that would be displayed on your website-->
 
 <h1 style="color:Teal;">INST 377 introductory exercise to html. </h1>
 <!-- the <h1> element defines a heading -->
-<p>This is a paragraph which is made by the "< p>" tag.</p>
+<p>This is a paragraph and it is made by the "< p>" tag.</p>
 <!-- HTMl tags normally come in pairs like the paragraph tags in line 10.
 The first tag is the start tag and the second tag is writen with a forward slash 
 to indicate that its the end tag.-->
@@ -45,7 +114,7 @@ to indicate that its the end tag.-->
 The source file(src), alternative text(alt), width, and height are 
 provided as attributes -->
 
-<p> This data cloud image was taken from the codeAcademy website <img src="https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/cloud.svg" 
+<p id="cloud"> This data cloud image was taken from the codeAcademy website <img src="https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/cloud.svg" 
     alt="https://codeAcademy.com" width="104" height="100"> </p>
 
 <!--The alt attribute specifies an alternative text to be used, if an image cannot be displayed-->
@@ -154,7 +223,7 @@ to make BIG or BOLD text-->
 <p>My favorite color is <del> yellow </del> Red </p>
 <p>My <ins>favorite</ins> color is red.</p>
 <p>This is a <sub>Subscripted text</sub> But this text is <sup> Superscripted text</sup> </p>
-<p>____________________________________________________________________________</p>
+<hr>
 
 <!--The HTML <q> element defines a short quotation.-->
 <p>Oscar Wilde once said: <q>Be yourself; everyne else is taken</q> </p>
@@ -208,7 +277,8 @@ like Violet, Gray, DodgerBlue and etc. HTML supports 140 standard color names
 <p style="background-color:rgb(225,200,225);" >Colors can be specified as an RGB value using this formula: rgb(red, green, blue)</p>
 <p style="background-color:#29ffaa;">Colors can be specified in a hexadecimal value in the form #rrggbb. rr(red), gg(green), bb(blue)</p>
 <p style="color:hsl(0,100%,90%);"> Saturation can be discribed as the intensty of a color</p> <br>
-<p> ____________________________________________________________________________</p>
+<p>The < hr> tag defines a thematic break in an HTML page in the form of a horizontal rule, it's used to seperate content in an HTML page.</p>
+<hr>
 
 <p> CSS stands for Cascading style sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
 <p style="font-family:Georgia;"> An inline CSS uses the style attribute of an HTML element</p>
@@ -223,6 +293,95 @@ like Violet, Gray, DodgerBlue and etc. HTML supports 140 standard color names
 Here's an example that uses a full URL to link to a style sheet.
 <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
 -->
+
+<h2 style="text-align:center; color:Teal;" > <ins>The exercises below examines links,Images,Tables and Lists </ins> </h2>
+<!-- HTML links are hyperlinks. Hyperlinks are defiened with the HTML < a> tag 
+     The href attribute specifies the destination of a link. The line text is the statement that
+     comes after href link which describes what the link is about so this is important to include.
+-->
+<p> The text to the right is a link to another website. <a href="https://amazon.com" target="_blank"> This is a link to the Amazon website </a> </p>
+<p>If you set the target attribute to "_blank", the <a href="https://www.w3schools.com/html/" target="_blank">link </a> will open in a new browser window or tab. </p>
+
+<p> HMTL bookmarks are used to allow readers to jump to specific parts of a web page. 
+    They are useful if your web page is very long. To create a bookmark you'll need an id attribute. <a href="#cloud"> click here to see the cloud</a>
+</p>
+<hr>
+<p> <img src="greece-milos.jpg" alt="An image from Greece" width="480" height="310"> <br>Images can improve the design and appearance of a web page</p>
+<!--The width and height attribute always defines the width and height of the image in pixels-->
+<p><img src="nature_gif14.gif" style="width:480px; height:310px"> <br>HTML allows animated GIFS</p>
+<p>Continue from Image as a link exercise!. Complete Image map, background images and picture element</p>
+<hr>
+<h2 style="background-color:cornsilk;">HTML TABLE</h2>
+<p>An HTML table is defined with the < table> tag. <b>Each table row</b> is defined with the < tr> tag.
+   A table <b>header</b> is defined with the < th> tag. A table <b>data/cell</b> is defined with the < td> tag
+   To make a cell span more than one column, use the colspan attribute. If you want the borders to collapse into one border, add the CSS (border-colapse) property.
+   To define a special style for a special table, add an id attribute to the table.
+</p>
+  
+<table style="border-collapse:collapse; text-align:left; border-spacing:5px";>
+    <caption>User Information</caption>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th colspan="2">Phone#</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>40</td>
+        <td>Male</td>
+        <td>2022122993</td>
+        <td>2022122331</td>
+    
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>34</td>
+        <td>Female</td>
+        <td>2022122334</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>28</td>
+        <td>Male</td>
+        <td>2022122112</td>
+    </tr>
+</table>
+<p>A border is set using the CSS (border) attribute. If you want to collapse into one border
+    add the CSS (border-collapse property). To set padding use the CSS (padding) property
+
+</p>
+<table id="t01">
+    <tr>
+        <th>Company</th>
+        <th>Contract</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma	</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+    <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>Helen Mendel</td>
+        <td>United Kingdom</td>
+    </tr>
+</table>
 
 
 </body>
