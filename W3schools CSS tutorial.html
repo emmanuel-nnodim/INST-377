@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>
+        This is a CSS tutorial
+    </title>
+    <style>
+        body{
+            background-color:lightblue;
+        }
+        h1,h2{
+            color:white;
+            text-align:center;
+        }
+        p{
+            font-family:verdana;
+            color:black;
+        }
+        #para2{
+            font-family:'Gill Sans MT';
+        }
+        .center{
+            text-align:center;
+            color:darkgreen;
+        }
+        p.large{
+            text-align:right;
+        }
+    </style>
+</head>
+
+<body>
+<h1>This is a tutorial on how to use CSS</h1>
+<p>CSS is a language that describes the style of an HTML document and how HTML elements are displayed.</p>
+<p>Css Stands for <b>Cascading style sheets.</b>External style sheets are stored in CSS files</p>
+
+<h2>CSS Structure</h2>
+<p><b>CSS Syntax.</b> <br>The selector points to the HTML element you want to style. The declaration block contains one or more
+    declarations seperated by semicolons. Each declaration includes a CSS property name and a value, seperated by a semicolon.
+    A CSS declaration always end with a semicolon, and the declaration blocks are surrounded by curly braces.
+</p>
+<img src="css syntax.JPG" title="CSS syntax illustration" width="500" height="170">
+
+<p id="para2">The id selector uses the id attribute of an HTML element to select a specific element. The id should be unique
+    within a page since it's used to select one unique element. An id name cannot start with a numberThis paragraph utilizes an id selector. 
+</p>
+
+<p class="center">The class selector selects elements with a specific class attribute. To select class elements write a (.) period 
+    followed by the class name. You can also specify when an HTMl elements should be affected by writing
+    (p.center or h1.center)
+</p>
+<p class=" center large">HTMl elements can also refer to more than one class.</p>
+
+<p>If you have elements with the same style definitions it will be better to group the selectors. EX: h1,h2,p{.....}</p>
+
+
+</body>
+</html>
+
