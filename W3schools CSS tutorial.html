@@ -4,12 +4,28 @@
     <title>
         This is a CSS tutorial
     </title>
+    <!--external style sheet reference < link rel="stylesheet" type="text/css" href="mystyle.css">-->
     <style>
         body{
-            background-color:lightblue;
+            /*background-color:lightblue;
+             The background-image property specifies an image to use as the background of an element.
+             USE background-repeat: no-repeat; to show the background image only once       
+             USE background-repeat: repeat-x or repeat-y to repeat an image horizontally or vertically
+             USE background-position:right top to position the background image is a certain position
+             USE background-attachment to specify whether the background image should scroll or be fixed.
+             */
+            background-image: url("fall.gif");
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+            
+            /* 
+            USE the shorthand property to set all the background properties in one declaration
+            background: white url("car.png") fixed;
+            */
+            
         }
-        h1,h2{
-            color:white;
+        h1,h2,h3{
+            color:maroon;
             text-align:center;
         }
         p{
@@ -26,6 +42,40 @@
         p.large{
             text-align:right;
         }
+        h3.bk{
+            background-color:green;
+            font-size:31px;
+            border-left:9px solid red;
+            border-bottom:7px solid red;
+        }
+        div{
+            background-color:gold
+        }
+        #df{
+            background-color:lightseagreen;
+        }
+        #b1{
+         border-style:inset;
+         border-left: 9px solid blue;
+         background-color:lightblue;
+         padding: 20px;
+        }
+        #b2{
+            border-style:solid;
+            border-radius:4px;
+        }
+        #b3{
+            border-bottom: 4px solid red; 
+        }
+        #m1{
+            /*with the margin shorthand you can specify all the margin properties in one line of code.
+            The margin can also be set to auto to horizontally center the element within it's container
+            margin:30px 20px 15px 10px;
+            */
+            border:1px solid black;
+            margin:auto;
+        }
+
     </style>
 </head>
 
@@ -52,6 +102,63 @@
 <p class=" center large">HTMl elements can also refer to more than one class.</p>
 
 <p>If you have elements with the same style definitions it will be better to group the selectors. EX: h1,h2,p{.....}</p>
+<p>A CSS comment starts with /* and ends with */</p>
+<p>There are three ways of inserting a CSS style sheet
+    <ol>
+        <li>External style sheet</li>
+        <li>Internal style sheet</li>
+        <li>Inline style</li>
+    </ol>
+</p>
+<p style="background-color:azure; font-size:20px">With <b>external style sheet,</b> you can change the look of an entire website by changing just one files
+    Each page must include a reference to the external style sheet file insde the < link> element which goes inside the < head> section
+    Link syntax goes as follows: < link rel="stylesheet" type="text/css" href="mystyle.css">
+    The style sheet must be saved with a .css extension <br>
+    An <b>internal style sheet</b> may be used if one single page has a unique style and written inside the head section with the  <'style'> attribute.
+    An inline style may be used to apply a unique style for a single element like < p> or < h1>
+</p>
+<p>When it comes to the Cascading order an inline style has the highest priority, and will override external and internal styles.</p>
+<p style="color:blue">For more information on CSS colors refer to the w3school html tutorial.<a href="https://github.com/emmanuel-nnodim/INST-377/blob/master/w3school%20html%20exercise.html" target="_blank">HTML tutorial link</a> </p>
+
+<h3 class="bk"> CSS Backgrounds</h3> 
+<div>This is a text inside a div element. <p id="df">This paragraph has it's own background color.</p>
+We are still in the division element</div>
+<p>The background-image property specifies an image to use as the background of an element. By default the image is repeated so it covers the entire element. 
+    When using a background image, use an image that does not disturb the text. Check the < head> tag for more info.
+</p>
+
+<p>CSS border properties allow you to specify the style, width, and color of an element's border. The border-style property specifies what kind of border to display.</p>
+<p>The following values are allowed for border styling with CSS
+    <ul>
+        <li style="border-style:dotted; border-color:aqua">dotted-Defines a dotted border</li><br>
+        <li style="border-style:dashed; border-width:5px">dashed-Defines a dashed border</li><br>
+        <li style="border-style:solid">solid-Defines a solid border</li><br>
+        <li style="border-style:double">double-Defines a double border</li><br>
+        <li style="border-style:groove">groove-Defies a 3d ridged border. The effect depends on the border color value</li><br>
+        <p  style="color:blue; border-style:solid; border-width:thick"> The CSS border-width property specifies the width of the four borders</p>
+        <li style="border-style:ridge; border-radius:6px;border-color:green
+        ">ridge-Defines a 3d ridged border. The effect depends on the border color value</li><br>
+        <li style="border-style:inset">inset-Defines a 3d inset border. The effect depends on the border color value</li><br>
+        <li style="border-style:outset;border-color:aqua">outset-Defines a 3d outset border. The effect depends on the border-color value.</li><br>
+        <li>none-Defines no border</li><br>
+        <li style="border-style:hidden">hidden-Defines a hidden border</li><br>
+        <li style="border-style:dotted dashed solid double">mixed borders can have from one to 4 values</li>
+        <!--Short way of writing borders: (border: 10px solid green;)-->
+    </ul>
+</p>
+
+<p>The CSS border-radius property is used to add rounded borders to an element. You can also specify all the individual border 
+    properties for just one side EX:(border-left/right, border-bottom/top)</p>
+<p id="b1">I have a blue left border</p>
+<p id="b2">This is a round border </p>
+<p id="b3">This is an Underlined border</p>
+
+<p id="m1">CSS margin are used to create space around elements. The properties for specifying margins for each element
+    includes:(margin-top/bottom, margin-right/left). Negative values are allowed.
+</p>
+
+<p>The CSS padding property is used to generate space around an element's content.</p>
+
 
 
 </body>
