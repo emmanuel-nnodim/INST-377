@@ -1,49 +1,108 @@
 .container{
-    background-image:url("Graduation.jpg");
-    background-repeat: repeat-y;
-    background-attachment: fixed;
+    background-color:white;
+    font-size: 18px;
 }
-.header{
-    background-color:lightblue;
+
+#box{
+    text-align: left;
+    position: relative;
+    margin-left: 550px;
+    width:50%;
+    height: 90px;
+    border:1px solid green;
+    padding:40px;
 }
-h1{
+
+.name_header{
+    background-color:darkcyan;
+    color:white;
     text-align:center;
-    
+    padding:20px 30px 20px 60px;
 }
-.flex-container{
-    border-style:none;
-    text-align:right;
-    
+.personal_info{
+    border-bottom: 4px solid red; 
+    width:20%;
+    height: 82px;
 }
-p, ul{
+
+.heading2,.sum_edu_heading{
+    border: 1px solid black;
+    border-radius: 4px;
+    /*width:25%;*/
+    text-align:center;
+    background-color:lightgrey; 
+}
+.sum_edu_heading{
+    width:20%;
+}
+
+.para,ul{
+    border:10px outset rgb(184, 221, 212);
     width:500px;
-    border:15px inset green;
-    font-size:20px;
+    
     padding:50px;
     margin:auto;
+    text-align: left;
 }
-table,th, td{
-    border: 1px solid black;
-    border-collapse:collapse; 
-    text-align:left; 
-}
-.flex-container{
-    padding:0;
-    margin:0;
-    list-style:none;
-    display:-webkit-box;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display:-webkit-flex;
+
+
+.flexbox_container{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    color:darkslateblue;
+    font-family:Georgia;
+   
+}
+.flexbox_item{
+    width:auto;
+    height: auto;
+    margin:10px;
+    border:2px double black;
+    background-color:white;
+    
+}
+
+.flexbox_item_1{
+    min-height: 100px;
+}
+
+.flexbox_item_2{
+    min-height: 100px;
+}
+
+.flexbox_item_3{
+    min-height: 100px;
+}
+
+
+
+.Edu-Sum-flexbox-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.flex-item{
+    width:210px;
+    height: 210px;
+    margin:10px;
+    border:2px solid black;
+    background-color:white;
+}
+
+.Sum_flexbox{
+    height: 266px;
+}
+
+.EDU_flexbox{
+    min-height: 100px;
 
 }
-.second_headings{
-    border: 1px solid black;
-    text-align:center;
-    background-color:lightgrey;
-}
-p{
-    background-color:
-}
+
+
+/*Work Cited: 
+
+Works Cited
+Simplified, W. D. (2018, September 27). YouTube. Retrieved from YouTube: https://www.youtube.com/watch?v=fYq5PXgSsbE
+
+
+*/
