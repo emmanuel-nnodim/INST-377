@@ -49,7 +49,7 @@
             border-bottom:7px solid red;
         }
         div{
-            background-color:gold
+            background-color:gold;
         }
         #df{
             background-color:lightseagreen;
@@ -74,6 +74,27 @@
             */
             border:1px solid black;
             margin:auto;
+        }
+        #pad1{
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom:20px;
+            padding-left:60px;
+            background-color:lightcoral;
+            border:4px dotted black;
+        }
+        #pad2{
+            padding:20px 30px 20px 60px;
+            background-color:lightgrey;
+            border:4px solid black;
+        }
+        #box{
+            
+            width:500px;
+            border:15px solid green;
+            padding:50px;
+            margin:190px;
+
         }
 
     </style>
@@ -118,7 +139,8 @@
     An inline style may be used to apply a unique style for a single element like < p> or < h1>
 </p>
 <p>When it comes to the Cascading order an inline style has the highest priority, and will override external and internal styles.</p>
-<p style="color:blue">For more information on CSS colors refer to the w3school html tutorial.<a href="https://github.com/emmanuel-nnodim/INST-377/blob/master/w3school%20html%20exercise.html" target="_blank">HTML tutorial link</a> </p>
+<p style="color:blue">For more information on CSS colors refer to the w3school html tutorial.
+    <a href="https://github.com/emmanuel-nnodim/INST-377/blob/master/w3school%20html%20exercise.html" target="_blank">HTML tutorial link</a> </p>
 
 <h3 class="bk"> CSS Backgrounds</h3> 
 <div>This is a text inside a div element. <p id="df">This paragraph has it's own background color.</p>
@@ -143,7 +165,7 @@ We are still in the division element</div>
         <li>none-Defines no border</li><br>
         <li style="border-style:hidden">hidden-Defines a hidden border</li><br>
         <li style="border-style:dotted dashed solid double">mixed borders can have from one to 4 values</li>
-        <!--Short way of writing borders: (border: 10px solid green;)-->
+        <!--Short way of writing borders: (border: 10px solid green;). The order is top,right,bottom,left-->
     </ul>
 </p>
 
@@ -158,8 +180,20 @@ We are still in the division element</div>
 </p>
 
 <p>The CSS padding property is used to generate space around an element's content.</p>
-
-
+<p id="pad1">CSS has properties for specifying the padding for each side of an element: (padding-top/bottom,padding-right/left). Negative values are not allowed when padding</p>
+<p id="pad2">The shorthand property for padding goes as follow: (padding-top, pading-right, padding-bottom,padding-left). 
+    padding and margin can also have 3,2 or one value. To control the width property use the (box-sizing:border-box;) property.
+</p>
+<p style="height:200px; width:90%; background-color:gray">The height and width properties are used to set the height and width of an element in CSS.
+    It doesn't include padding, border or margins. The max-width property is used to set the maximum width of an element and it overrides the width property. 
+</p>
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders,padding, and the actual content</p>
+<p id="box">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The total width of an element should be calculated like this:
+     Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+     The total height of an element should be calculated like this:
+     Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
 
 </body>
 </html>
