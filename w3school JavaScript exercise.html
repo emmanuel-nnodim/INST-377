@@ -33,6 +33,16 @@
         .tab tr:nth-child(odd) {
             background-color: white
         }
+        
+        h2{
+            color:maroon;
+        }
+        h2:hover,
+        button:hover{
+
+            color:blue;
+            }
+        }
     </style>
 
 </head>
@@ -393,6 +403,8 @@
             console.log(posi)
             
         </script>
+        <h2>Functions, Objects, Events, Strings, and Numbers. 
+        </h2>
 
         <p>
             For best readability, programmers often like to avoid code lines longer than 80 characters.
@@ -427,7 +439,10 @@
         <p>JavaScript will try to convert strings to numbers in all numeric operations. JavaScript uses the + operator to concatenate 
             You can use the global JavaScript functions isNaN() to find out if a value is a number. Infinity is the value JavaScript will return if 
             you calculate a number outside the largest possible number.
-            Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
+            Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2. The toString() method returns a number as a string.
+            The toString() method returns a number as a string. toExponential() returns a string, with a number rounded and written using exponential notation
+            toFixed() returns a string, with the number written with a specified number of decimals. toFixed(2) is perfect for working with money.
+
         </p>
 
         <script>
@@ -437,7 +452,69 @@
             myNumber = myNumber * myNumber;
         console.log(myNumber);
         }
+        var numb = 12.435646
+        var numb2 = numb.toFixed(2)
+        console.log(numb2)
         </script>
+
+        <p>
+            JavaScript arrays are used to store multiple values in a single variable.
+            An Array can hold many values under a single name, and you can access the values by refering to an 
+            index number. You can access an array element by referring to the index number[0]. Array indexes start with 0.
+            [0] is the first element. [1] is the second element. You can change and add new values to an array by referencing the index.
+            JavaScript variables can be objects so You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array.
+            The length property is always one more than the highest array index.
+
+            
+        </p>
+
+        <script>
+            var cars = ["Chevrolet", "Volvo", "BMW", "Mercedes"];
+            console.log(cars);
+            var value = cars[2];
+            cars[4] = "Toyota";
+            var value2 = cars[cars.length -1];
+            console.log(value,'Is at index of 2', value2, "\"-1 gives you the last element in an array\" ");
+            console.log(cars[0]);
+            var person = {Firstname:"Jammie", Lastname:"Vardy"}
+            console.log(person.Lastname, person.Firstname);
+            var x = cars.length; // returns the number of elements
+            var y = cars.sort(); // The sort() method sorts arrays
+            console.log(x,'is the length',y,'sorting');
+
+        </script>
+
+        <h2>Looping Array Elements
+        </h2>
+
+        <p>
+            The Safest way to loop through an array, is using a for loop. Be <b>Careful</b> with loops so you don't end up with
+            an infinite loop. when writing loops You can also use the Array.forEach() function: from (JS Arrays).
+            The easiest way to add a new element to an array is using the puch() method. New elements can also be added using the length property.
+            In JavaScript, arrays use numbered indexes. In JavaScript, Objects use names indexes.
+
+        </p>
+        <p id = "fruit"></p>
+
+        <script>
+            var fruits, Flen, i, text;
+            fruits = ["Orange", "Apple", "pear", "Avacado", "Banana", "Grape", "Mango"];
+            fruits.push("Udara");
+
+            Flen = fruits.length;
+            var len = fruits.length
+            console.log(len, 'this is the total number of the fruits element')
+
+            text = "<ol>"
+            for (i = 0; i < fruits.length; i++) {
+                text += "<li>" + fruits[i] + "</li>";
+            }    
+            
+            text += "</ol>";
+            document.getElementById("fruit").innerHTML = text;
+            console.log(text)
+        </script>
+
 
 </div>
 </body>
